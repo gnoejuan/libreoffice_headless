@@ -56,7 +56,7 @@ RUN ./autogen.sh --disable-report-builder --disable-lpsolve --disable-coinmp \
 	--disable-introspection --without-krb5 --disable-python --disable-pch \
 	--with-system-openssl --with-system-curl --disable-ooenv --disable-dependency-tracking
 RUN make
-RUN ./instdir/**/*
+RUN strip ./instdir/**/*
 RUN rm -rf ./instdir/share/gallery \
 	./instdir/share/config/images_*.zip \
 	./instdir/readmes \
