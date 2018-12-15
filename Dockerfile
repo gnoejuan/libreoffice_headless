@@ -1,5 +1,5 @@
 FROM ubuntu:bionic
-RUN  echo 'Acquire::http { Proxy "http://192.168.1.148:3142"; };' >> /etc/apt/apt.conf.d/01proxy
+# RUN  echo 'Acquire::http { Proxy "http://192.168.1.148:3142"; };' >> /etc/apt/apt.conf.d/01proxy
 RUN apt-get update && apt-get upgrade -y && apt-get install git \
     flex \
     wget \
