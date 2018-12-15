@@ -40,7 +40,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install git \
     libnspr4-dev -y 
 RUN apt-get install build-essential -y
 WORKDIR /app
-RUN git config --global url."http://192.168.1.148:3142/".insteadOf https://
+# RUN git config --global url."http://192.168.1.148:3142/".insteadOf https://
 RUN git clone --depth=1 git://anongit.freedesktop.org/libreoffice/core .
 RUN ccache --max-size 6 G && ccache -s
 RUN ./autogen.sh --disable-report-builder --disable-lpsolve --disable-coinmp \
